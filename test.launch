@@ -2,7 +2,7 @@
   <node pkg="rviz"
         name="rviz"
         type="rviz"
-        args=""
+        args="-d $(find rviz_collada_marker)/default.rviz"
   />
   <node pkg="rviz_collada_marker"
         name="rviz_collada_marker"
