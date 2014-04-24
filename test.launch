@@ -1,0 +1,12 @@
+<launch>
+  <node pkg="rviz"
+        name="rviz"
+        type="rviz"
+        args=""
+  />
+  <node pkg="rviz_collada_marker"
+        name="rviz_collada_marker"
+        type="marker_mesh_sample.py"
+   />
+  <param name="robot_description" textfile="$(find rviz_collada_marker)/model.urdf" />
+</launch>
