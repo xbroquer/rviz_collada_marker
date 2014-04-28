@@ -8,7 +8,7 @@ Panels:
         - /Status1
         - /Marker1
         - /RobotModel1
-        - /RobotModel1/Status1
+        - /Marker2
       Splitter Ratio: 0.5
     Tree Height: 540
   - Class: rviz/Selection
@@ -69,12 +69,25 @@ Visualization Manager:
         Expand Link Details: false
         Expand Tree: false
         Link Tree Style: ""
+        nil_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
       Name: RobotModel
       Robot Description: robot_description
       TF Prefix: ""
       Update Interval: 0
       Value: true
       Visual Enabled: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /marker2
+      Name: Marker
+      Namespaces:
+        "": true
+      Queue Size: 100
+      Value: true
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
@@ -99,7 +112,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 10
+      Distance: 6.60449
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.06
         Stereo Focal Distance: 1
@@ -111,10 +124,10 @@ Visualization Manager:
         Z: 0
       Name: Current View
       Near Clip Distance: 0.01
-      Pitch: 0.770398
+      Pitch: 0.700398
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 0.115397
+      Yaw: 0.735397
     Saved: ~
 Window Geometry:
   Displays:
@@ -132,5 +145,5 @@ Window Geometry:
   Views:
     collapsed: false
   Width: 1200
-  X: 46
-  Y: 60
+  X: 32
+  Y: 24

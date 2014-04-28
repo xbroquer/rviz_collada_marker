@@ -6,6 +6,7 @@ from visualization_msgs.msg import Marker
 rospy.init_node("marker_mesh_sample")
 
 pub = rospy.Publisher('marker', Marker)
+pub2 = rospy.Publisher('marker2', Marker)
 r = rospy.Rate(10)
 while not rospy.is_shutdown():
     mesh_marker = Marker()
@@ -23,4 +24,8 @@ while not rospy.is_shutdown():
     mesh_marker.mesh_resource = "package://rviz_collada_marker/nil_link_mesh.dae"
     mesh_marker.mesh_use_embedded_materials = True
     pub.publish(mesh_marker)
+
+    mesh_marker.mesh_resource = "package://rviz_collada_marker/base.dae"
+    mesh_marker.pose.position.y = 2.0
+    pub2.publish(mesh_marker)
     r.sleep()

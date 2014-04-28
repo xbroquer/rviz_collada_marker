@@ -9,4 +9,9 @@
         type="marker_mesh_sample.py"
    />
   <param name="robot_description" textfile="$(find rviz_collada_marker)/model.urdf" />
+  <node pkg="tf"
+        if="false"
+        name="nil_link_base2_M1K"
+        type="static_transform_publisher"
+        args="0 0 0 0 0 0 nil_link base2_M1K 10" />
 </launch>
