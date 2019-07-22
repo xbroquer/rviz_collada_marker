@@ -1,6 +1,6 @@
 <launch>
   <node pkg="rviz"
-        name="rviz"
+        name="$(anon rviz)"
         type="rviz"
         args="-d $(find rviz_collada_marker)/default.rviz"
   />
