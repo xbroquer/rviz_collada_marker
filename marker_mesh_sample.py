@@ -6,9 +6,11 @@ from visualization_msgs.msg import MarkerArray
 
 rospy.init_node("marker_mesh_sample")
 
-pub = rospy.Publisher('marker', Marker)
-pub2 = rospy.Publisher('marker2', Marker)
-moonwalk_markers_pub = rospy.Publisher('moonwalk_markers', MarkerArray)
+pub = rospy.Publisher('marker', Marker, queue_size=1)
+pub2 = rospy.Publisher('marker2', Marker, queue_size=1)
+pub3 = rospy.Publisher('marker3', Marker, queue_size=1)
+pub4 = rospy.Publisher('marker4', Marker, queue_size=1)
+moonwalk_markers_pub = rospy.Publisher('markers', MarkerArray, queue_size=1)
 
 r = rospy.Rate(10)
 
@@ -34,6 +36,22 @@ while not rospy.is_shutdown():
     mesh_marker.mesh_resource = "package://rviz_collada_marker/base.dae"
     mesh_marker.pose.position.y = 2.0
     pub2.publish(mesh_marker)
+
+
+    mesh_marker.pose.position.y = 4.0
+    mesh_marker.color.r = 0
+    mesh_marker.color.g = green
+    mesh_marker.color.b = 0
+    mesh_marker.color.a = 0.2
+    pub3.publish(mesh_marker)
+
+    mesh_marker.mesh_use_embedded_materials = False
+    mesh_marker.pose.position.y = 6.0
+    mesh_marker.color.r = 0
+    mesh_marker.color.g = green
+    mesh_marker.color.b = 0
+    mesh_marker.color.a = 0.2
+    pub4.publish(mesh_marker)
 
     moonwalk_markers = MarkerArray()
 
