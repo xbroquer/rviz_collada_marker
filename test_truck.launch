@@ -1,0 +1,11 @@
+<launch>
+
+
+  <param name="robot_description" textfile="$(find rviz_collada_marker)/truck.urdf" />
+
+  <node pkg="rviz"
+        name="$(anon rviz)"
+        type="rviz"
+        args="-d $(find rviz_collada_marker)/truck.rviz"
+  />
+</launch>
